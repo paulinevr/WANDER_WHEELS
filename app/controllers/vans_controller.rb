@@ -1,5 +1,5 @@
 class VansController < ApplicationController
-  before_action :set_task, only: [:show, :update]
+  before_action :set_van, only: [:show, :update]
 
   def index
     @vans = Van.all
@@ -12,14 +12,17 @@ class VansController < ApplicationController
   end
 
   def create
-    van = Van.new(van_params)
-    van.save
-    redirect_to vans_path
+    @van = Van.new(van_params)
+    if van.save
+      redirect_to vans_path(@van)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def update
     @van.update(van_params)
-    redirect_to task_path(@van)
+    redirect_to van_path(@van)
   end
 
   private
