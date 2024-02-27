@@ -1,0 +1,18 @@
+img {
+  object-fit: cover;
+  height: 250px;
+}
+
+.card {
+  background-color: #ffffff;
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: 5px;
+  font-style: $body-font;
+}
+
+h1 {
+  font-style: $headers-font;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
