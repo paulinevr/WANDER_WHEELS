@@ -1,4 +1,5 @@
 Van.destroy_all
+User.destroy_all
 
 user = User.create!(email: "john@mail.com", password: "123456", username: "john", profile_text: "testinggggg")
 

@@ -1,0 +1,15 @@
+<div class="container">
+  <%= simple_form_for(@van) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :car_brand %>
+    <%= f.input :model %>
+    <%= f.input :capacity %>
+    <%= f.input :mileage %>
+    <%= f.input :production_year %>
+    <%= f.input :fuel_type %>
+    <%= f.input :price_per_day %>
+    <%= f.submit %>
+  <% end %>
+</div>

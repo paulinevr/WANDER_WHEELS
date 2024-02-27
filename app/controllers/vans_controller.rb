@@ -1,4 +1,5 @@
 class VansController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_van, only: [:show, :update]
 
   def index
@@ -13,8 +14,9 @@ class VansController < ApplicationController
 
   def create
     @van = Van.new(van_params)
-    if van.save
-      redirect_to vans_path(@van)
+    @van.user = current_user
+    if @van.save
+      redirect_to van_path(@van)
     else
       render :new, status: :unprocessable_entity
     end
