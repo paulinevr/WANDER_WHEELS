@@ -1,15 +1,23 @@
 <div class="container py-4">
-  <%= simple_form_for(@van) do |f| %>
+  <%= simple_form_for @van, defaults: { input_html: { class: 'rounded-pill' } } do |f| %>
      <div class="row">
       <div class="col-8">
         <%= f.input :title %>
       </div>
       <div class="col-4">
-        <%= f.input :capacity %>
+        <%= f.input :price_per_day %>
       </div>
     </div>
     <%= f.input :description %>
     <%= f.input :address %>
+    <div class="row">
+      <div class="col-6">
+        <%= f.input :capacity %>
+      </div>
+      <div class="col-6">
+        <%= f.input :mileage %>
+      </div>
+    </div>
     <div class="row">
       <div class="col-6">
         <%= f.input :car_brand %>
@@ -23,17 +31,9 @@
         <%= f.input :fuel_type %>
       </div>
       <div class="col-6">
-        <%= f.input :mileage %>
-      </div>
-    </div>
-     <div class="row">
-      <div class="col-6">
         <%= f.input :production_year %>
       </div>
-      <div class="col-6">
-        <%= f.input :fuel_type %>
-      </div>
     </div>
-    <%= f.submit %>
+    <%= f.button :submit, "Add van to marketplace", class: "btn btn-primary w-100 rounded-pill primary-button" %>
   <% end %>
 </div>
