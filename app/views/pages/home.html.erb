@@ -1,13 +1,8 @@
 <div class="body-home">
-
-<%= image_tag "homepage_logo.png", alt: "Wander Wheels homapage", class: "picture-home" %>
-
-  <div class=”container mt-5”>
-    <h2 class= "subtitle" >Connect with people</h2>
-    <div class="container d-flex flex-column">
-      <%= link_to "PLAN YOUR NEXT ESCAPE", vans_path, class:"plan_your_escape_button"%>
-      <br>
-      <%= link_to "RENT YOUR VAN",  new_van_path, class:"rent_your_van_button"%>
-    </div>
+  <%= image_tag "homepage_logo.png", alt: "Wander Wheels homapage", class: "picture-home" %>
+  <h2 class= "subtitle" >Connect with people</h2>
+  <div class="flex">
+    <%= link_to "PLAN YOUR NEXT ESCAPE", vans_path, class:"plan_your_escape_button"%>
+    <%= link_to "RENT YOUR VAN",  new_van_path, class:"rent_your_van_button"%>
   </div>
 </div>

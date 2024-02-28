@@ -1,58 +1,69 @@
 // Specific CSS for your home-page
 .body-home {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   background-color: $background_home;
-  padding-top: 50px;
+  padding-top: 7em;
 }
 
 .picture-home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: cover;
-  object-position: bottom;
-  height: 350px;
+  max-width: 70vw;
+  display: block;
   margin: 0 auto;
 }
 
 .subtitle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   color: $letter_home;
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 40px;
-  font-size: 45px;
+  font-size: 40px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan_your_escape_button,
+.rent_your_van_button {
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 60%;
+  padding: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 1.8em;
 }
 
 .plan_your_escape_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: $button_home;
-  font-size: 15px;
-  width: 50%;
-  margin: 0 auto;
-  padding: 5px;
-  text-decoration: none;
 }
 
 .rent_your_van_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
   background-color: $button;
-  border: solid 1px white;
-  color: white;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
-  font-size: 15px;
-  width: 50%;
-  padding: 5px;
-  margin: 0 auto;
-  text-decoration: none;
+}
+
+@media(min-width: 480px) {
+  .body-home {
+    padding-top: 0em;
+  }
+
+  .picture-home {
+    max-width: 30vw;
+  }
+
+  .subtitle {
+    padding-top: 70px;
+    font-size: 60px;
+  }
+
+  .plan_your_escape_button,
+  .rent_your_van_button {
+    width: 25%;
+    font-size: 30px;
+    padding: 15px;
+  }
 }
