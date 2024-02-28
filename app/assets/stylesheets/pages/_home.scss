@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.body-home {
+  height: 100vh;
+  width: 100vw;
+  background-color: $background_home;
+}
+
+.picture-home {
+  object-fit: cover;
+  height: 250px;
+}
