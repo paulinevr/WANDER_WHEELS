@@ -3,9 +3,55 @@
   height: 100vh;
   width: 100vw;
   background-color: $background_home;
+  padding-top: 50px;
 }
 
 .picture-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   object-fit: cover;
-  height: 250px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $letter_home;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  font-size: 45px;
+}
+
+.plan_your_escape_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: $button_home;
+  font-size: 15px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.rent_your_van_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-color: $button;
+  border: solid 1px white;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  font-size: 15px;
+  width: 50%;
+  padding: 5px;
+  margin: 0 auto;
+  text-decoration: none;
 }
