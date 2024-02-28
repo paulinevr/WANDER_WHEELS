@@ -1,5 +1,3 @@
-
-
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -7,8 +5,8 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <% @van.photos.each do |photo| %>
-      <div class="carousel-item active">
+    <% @van.photos.each_with_index do |photo, index| %>
+      <div class="carousel-item <%= index == 0 ? "active" : "" %>">
         <%= cl_image_tag photo.key, height: 300, crop: :fill %>
       </div>
     <% end %>
