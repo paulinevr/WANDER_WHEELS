@@ -16,7 +16,9 @@ van = Van.new(title: "VW Retro Van",
   price_per_day: 150,
   user: user)
   file = URI.open("https://sosoir.lesoir.be/sites/default/files/styles/image_1050x460/public/gallery/caleb-george-ivxfoilgyha-unsplash.jpg?itok=1BaJPKhm")
-  van.photos.attach(io: file, filename: "VW Retro Van", content_type: "image/png")
+  van.photos.attach(io: file, filename: "VW Retro Van 1", content_type: "image/png")
+  file = URI.open("https://images.pexels.com/photos/2689631/pexels-photo-2689631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+  van.photos.attach(io: file, filename: "VW Retro Van 2", content_type: "image/png")
   van.save!
 
 van = Van.new(title: "Big Family Motorhome",
@@ -31,7 +33,9 @@ van = Van.new(title: "Big Family Motorhome",
   price_per_day: 195,
   user: user)
   file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZBD-tz_hg-oyUCEH1MkZ3Ho8u-oJKirNLfA&usqp=CAU")
-  van.photos.attach(io: file, filename: "Big Family Motorhome.png", content_type: "image/png")
+  van.photos.attach(io: file, filename: "Big Family Motorhome 1", content_type: "image/png")
+  file = URI.open("https://i.pinimg.com/550x/45/f6/da/45f6da3a7fa1221dfe4f21b347836915.jpg")
+  van.photos.attach(io: file, filename: "Big Family Motorhome 2", content_type: "image/png")
   van.save!
 
 van = Van.new(title: "Luxurious Camper",
@@ -46,7 +50,9 @@ van = Van.new(title: "Luxurious Camper",
   price_per_day: 270,
   user: user)
   file = URI.open("https://www.campervanfinder.com.au/wp-content/uploads/2015/10/expensive1.jpg")
-  van.photos.attach(io: file, filename: "Luxurious Camper.png", content_type: "image/png")
+  van.photos.attach(io: file, filename: "Luxurious Camper 1", content_type: "image/png")
+  file = URI.open("https://i.pinimg.com/originals/9a/bb/37/9abb37886bc58ab12d972c50bbd244ee.jpg")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
   van.save!
 
 
@@ -62,7 +68,9 @@ Van.new(title: "Eco Camper",
   price_per_day: 250,
   user: user)
   file = URI.open("https://www.francebleu.fr/s3/cruiser-production/2020/07/4fc02efa-e512-4acf-aca8-9399d684d3b7/1200x680_c_elise_fournier.jpg")
-  van.photos.attach(io: file, filename: "Luxurious Camper.png", content_type: "image/png")
+  van.photos.attach(io: file, filename: "Luxurious Camper 1", content_type: "image/png")
+  file = URI.open("https://www.acsifreelife.nl/wp-content/uploads/2021/06/Camp-r-interieur.jpg")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
   van.save!
 
   puts "Seed done!"
