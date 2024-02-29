@@ -18,7 +18,7 @@ class VansController < ApplicationController
     @van = Van.new(van_params)
     @van.user = current_user
     if @van.save
-      redirect_to van_path(@van)
+      redirect_to my_van_reservations_reservations_path
     else
       render :new, status: :unprocessable_entity
     end
