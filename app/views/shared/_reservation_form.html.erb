@@ -1,10 +1,14 @@
 <%= simple_form_for [@van, @reservation] do |f| %>
-  <%= f.input :from, as: :date, start_year: Date.today.year,
+  <%= f.input :from, label_html: { class: "text-uppercase"}, as: :date, start_year: Date.today.year,
                                 end_year: Date.today.year + 2,
                                 order: [:day, :month, :year]  %>
-  <%= f.input :until, as: :date, start_year: Date.today.year,
+  <%= f.input :until,label_html: { class: "text-uppercase"}, as: :date, start_year: Date.today.year,
                                   end_year: Date.today.year + 2,
                                   order: [:day, :month, :year]  %>
-  <%= f.input :comment %>
-  <%= f.submit "Make your reservation", class: "btn btn-primary" %>
+  <%= f.input :comment, label_html: { class: "text-uppercase"} %>
+
+  <div class="text-center">
+    <%= f.submit "START YOUR ESCAPE", class: "btn w-70 rounded-pill reservation-button" %>
+  </div>
+
 <% end %>
