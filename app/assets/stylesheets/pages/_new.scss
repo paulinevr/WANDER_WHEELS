@@ -1,0 +1,23 @@
+.signup {
+  background-color: $background_home;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  font-size: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  padding-bottom: 40px;
+}
+
+.login-button {
+  background-color: $button_home;
+  margin-top: 40px;
+  font-size: 20px;
+}
