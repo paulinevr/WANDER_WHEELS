@@ -1,4 +1,5 @@
-<%= simple_form_for @van, defaults: { input_html: { class: 'rounded-pill border border-dark' } } do |f| %>
+
+<%= simple_form_for @van, defaults: { input_html: { class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } } do |f| %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <div class="row">
     <div class="col-8">
@@ -34,5 +35,9 @@
       <%= f.input :production_year %>
     </div>
   </div>
-  <%= f.button :submit, "Add van to marketplace", class: "btn btn-primary w-100 rounded-pill primary-button" %>
+
+  <div class="text-center">
+  <%= f.button :submit, "READY", class: "btn btn-primary w-50 rounded-pill primary-button" %>
+  </div>
+
 <% end %>
