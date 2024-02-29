@@ -6,7 +6,9 @@ class VansController < ApplicationController
     @vans = Van.all
   end
 
-  def show; end
+  def show
+    @reservation = Reservation.new
+  end
 
   def new
     @van = Van.new

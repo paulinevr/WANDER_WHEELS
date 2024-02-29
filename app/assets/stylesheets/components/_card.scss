@@ -5,7 +5,8 @@
   border-radius: 1em;
 }
 
-.card-trip>img {
+.card-trip>img,
+.card-trip>a>img {
   height: 180px;
   width: 100%;
   object-fit: cover;
