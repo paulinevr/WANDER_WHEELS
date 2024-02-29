@@ -21,6 +21,10 @@ class ReservationsController < ApplicationController
     redirect_to reservations_path
   end
 
+  def my_van_reservations
+    @reservations = Reservation.where(van: Van.find_by(user: current_user))
+  end
+
   private
 
   def reservations_params
