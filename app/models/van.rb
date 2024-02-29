@@ -1,6 +1,7 @@
 class Van < ApplicationRecord
   belongs_to :user
 
+  has_many :reservations
   has_many_attached :photos
 
   validates :title, :description, :address, :model, :capacity, :mileage, :production_year, :fuel_type, :price_per_day, :car_brand, :photos, presence: true

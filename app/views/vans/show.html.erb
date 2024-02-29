@@ -54,3 +54,7 @@
           <%= @van.address %>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <%= render partial: 'shared/reservation_form', locals: { van: @van, reservation: @reservation } %>
+      </div>
+</div>
