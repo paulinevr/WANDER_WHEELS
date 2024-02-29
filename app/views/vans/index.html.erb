@@ -4,7 +4,7 @@
       <div class="col-12 col-sm-6 col-md-4 mb-4">
           <%= link_to van_path(van), class:"text-decoration-none text-reset" do %>
             <div class="card-trip">
-              <%= van.photos[0].key ? (cl_image_tag van.photos[0].key, crop: :fill) : (image_tag "Placeholder.svg", alt: "Placeholder") %>
+              <%= cl_image_tag van.photos[0].key, crop: :fill %>
               <div class="card-trip-infos">
                 <h2><%= van.title %></h2>
                 <p>Price/day: €<%= van.price_per_day %></p>
