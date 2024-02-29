@@ -9,27 +9,27 @@
           <%= f.input :firstname,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "firstname", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                      input_html: { autocomplete: "firstname", class: 'rounded-pill border border-white white-input2' }, label_html: { class: 'text-uppercase' } %>
           <%= f.input :lastname,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "lastname", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                      input_html: { autocomplete: "lastname", class: 'rounded-pill border border-white white-input2' }, label_html: { class: 'text-uppercase' } %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
-                      input_html: { autocomplete: "email", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                      input_html: { autocomplete: "email", class: 'rounded-pill border border-white white-input2' }, label_html: { class: 'text-uppercase' } %>
           <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       hint_html: { class: 'text-white' },
-                      input_html: { autocomplete: "new-password", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                      input_html: { autocomplete: "new-password", class: 'rounded-pill border border-white white-input2' }, label_html: { class: 'text-uppercase' } %>
           <%= f.input :password_confirmation,
                       required: true,
-                      input_html: { autocomplete: "new-password", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                      input_html: { autocomplete: "new-password", class: 'rounded-pill border border-white white-input2' }, label_html: { class: 'text-uppercase' } %>
         </div>
         <div class="text-center">
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "btn w-50 rounded-pill signup-button " %>
+            <%= f.button :submit, "SIGN UP", class: "btn w-50 rounded-pill signup-button " %>
           </div>
          </div>
       <% end %>

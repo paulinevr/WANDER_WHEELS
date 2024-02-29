@@ -7,15 +7,16 @@
             <%= f.input :email,
                         required: false,
                         autofocus: true,
-                        input_html: { autocomplete: "email", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                        input_html: { autocomplete: "email", class: 'rounded-pill border border-white white-input' }, label_html: { class: 'text-uppercase' } %>
             <%= f.input :password,
                         required: false,
-                        input_html: { autocomplete: "current-password", class: 'rounded-pill border border-dark' }, label_html: { class: 'text-uppercase' } %>
+                        input_html: { autocomplete: "current-password", class: 'rounded-pill border white-input' }, label_html: { class: 'text-uppercase' } %>
             <%= f.input :remember_me, input_html: {class: "border border-dark" } , as: :boolean  if devise_mapping.rememberable?  %>
           </div>
           <div class="text-center">
             <div class="form-actions">
               <%= f.button :submit, "LOG IN", class: "btn w-50 rounded-pill login-button " %>
+              <%= link_to "SIGN UP", new_user_registration_path, class: "btn w-50 rounded-pill signup2-button" %>
             </div>
           </div>
         <% end %>
