@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     resources :reservations, only: [:create]
   end
 
-  resources :reservations, only: [:index, :destroy]
+  resources :reservations, only: [:index, :destroy] do
+    collection do
+      get :my_van_reservations
+    end
+  end
 end
