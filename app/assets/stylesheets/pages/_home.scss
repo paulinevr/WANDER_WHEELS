@@ -13,10 +13,10 @@
 
 .subtitle {
   text-align: center;
-  color: $letter_home;
+  color: white;
   padding-top: 90px;
   padding-bottom: 40px;
-  font-size: 40px;
+  font-size: 48px;
 }
 
 .flex {
@@ -28,13 +28,13 @@
 .plan_your_escape_button,
 .rent_your_van_button {
   text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 60%;
-  padding: 5px;
-  font-size: 15px;
+  border-radius: 30px;
+  width: 70%;
+  padding: 10px;
+  font-size: 20px;
   text-decoration: none;
-  color: white;
+  color: rgb(0, 0, 0);
+  background-color: $button_home;
   margin-bottom: 1.8em;
 }
 
@@ -44,6 +44,8 @@
 
 .rent_your_van_button {
   background-color: $button;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
 
 @media(min-width: 480px) {

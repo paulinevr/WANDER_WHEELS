@@ -11,7 +11,7 @@
 }
 
 h2 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 50px;
   padding-bottom: 40px;
 }
@@ -19,5 +19,20 @@ h2 {
 .login-button {
   background-color: $button_home;
   margin-top: 40px;
+  font-size: 20px;
+}
+
+.signup2-button {
+  margin-top: 30px;
+  font-size: 20px;
+  background-color: #185D7B;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.white-input {
+  background-color: #185D7B;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   font-size: 20px;
 }
