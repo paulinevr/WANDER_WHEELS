@@ -1,17 +1,20 @@
-<div class="container">
-  <div class="row mt-4">
-    <% @vans.each do |van| %>
-      <div class="col-12 col-sm-6 col-md-4 mb-4">
-          <%= link_to van_path(van), class:"text-decoration-none text-reset" do %>
-            <div class="card-trip">
-              <%= cl_image_tag van.photos[0].key, crop: :fill %>
-              <div class="card-trip-infos">
-                <h2><%= van.title %></h2>
-                <p>Price/day: €<%= van.price_per_day %></p>
+<div class="list-vans">
+  <div class="container">
+    <h1 class="my-4 pt-4 text-center"> Choose Your Dream</h1>
+    <div class="row mt-4">
+      <% @vans.each do |van| %>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <%= link_to van_path(van), class:"text-decoration-none text-reset" do %>
+              <div class="card-trip">
+                <%= cl_image_tag van.photos[0].key, crop: :fill %>
+                <div class="card-trip-infos">
+                  <h2><%= van.title %></h2>
+                  <p><strong>Price/day: </strong><%= van.price_per_day %> €</p>
+                </div>
               </div>
-            </div>
-          <% end %>
-      </div>
-    <% end %>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
