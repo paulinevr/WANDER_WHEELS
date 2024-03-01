@@ -1,6 +1,6 @@
 <div class=my-van-reservation>
   <div class="container">
-    <h1 class="my-4 pt-4 text-center">Let's Connect !</h1>
+    <h1 class="my-4 pt-4 text-center text-white">Let's Connect !</h1>
     <% unless @reservations.empty? %>
       <div class="row mt-4 align-items-center fs-5">
         <ul class="list-group p-3">
@@ -17,7 +17,7 @@
         </ul>
       </div>
     <% else %>
-      <h4 class="text-center text-white">No reservations yet for your van.</h4>
+      <p class="text-center text-white fs-4">No reservations yet for your van.</p>
     <% end %>
     <div class="row justify-content-center m-4">
       <%= link_to "VAN BOOKINGS", van_path(Van.find_by(user: current_user)), class:"btn w-50 rounded-pill van-reservation-button text-center" %>
