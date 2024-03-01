@@ -57,6 +57,15 @@
         </div>
        </div>
       <div class="row justify-content-center">
-        <%= render partial: 'shared/reservation_form', locals: { van: @van, reservation: @reservation } %>
+        <% if @van.user != current_user %>
+          <%= render partial: 'shared/reservation_form', locals: { van: @van, reservation: @reservation } %>
+        <% else %>
+          <div class="row flex-column align-items-center my-3">
+            <%= link_to "UPDATE MY VAN", edit_van_path(@van), class:"btn btn-primary mb-3 rounded-pill w-50" %>
+            <%= link_to "MY VAN RENTALS", my_van_reservations_reservations_path, class:"btn yellow mb-3 rounded-pill w-50 text-white" %>
+            <%= link_to "DELETE", van_path(@van), class:"btn btn-danger mb-3 rounded-pill w-50 text-white",
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure? Your van and its reservations will be removed!"} %>
+          </div>
+        <% end %>
       </div>
 </div>

@@ -1,6 +1,6 @@
 class VansController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_van, only: [:show, :update]
+  before_action :set_van, only: [:show, :update, :destroy]
 
   def index
     @vans = Van.all
@@ -24,9 +24,21 @@ class VansController < ApplicationController
     end
   end
 
+  def edit
+    @van = Van.find(params[:id])
+  end
+
   def update
+    if params[:van][:photos].first.blank?
+      params[:van].delete(:photos)
+    end
     @van.update(van_params)
     redirect_to van_path(@van)
+  end
+
+  def destroy
+    @van.destroy
+    redirect_to root_path
   end
 
   private
