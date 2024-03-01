@@ -30,7 +30,7 @@ van = Van.new(title: "Camping-car de Christophe",
 
 van = Van.new(title: "Camping-car de Capucine ",
   description: "With a spacious, modern and comfortable interior, you'll be able to cover long distances without stopping.",
-  address: "Namur, rue En Rhée 20",
+  address: "Namur, rue de Fer 4",
   car_brand: "Ford",
   model: "Chausson Flash 03",
   capacity: 6,
@@ -68,7 +68,7 @@ van = Van.new(title: "Thibaud Van",
 
 van = Van.new(title: "4X4 de Tom",
   description: "It's made for getting off the beaten track and going where vans and camper vans can't: incredible spots and freedom.",
-  address: "Liège",
+  address: "Liège, place de la Cathédrale 14",
   car_brand: "Susuki",
   model: "Jimny full black",
   capacity: 2,
@@ -82,6 +82,44 @@ van = Van.new(title: "4X4 de Tom",
   file = URI.open("https://yescapa.twic.pics/rental/picture/f57dfc68-b3e9-4fe0-a82c-2f5772a923c8_1697101827?twic=v1/max=630")
   van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
   file = URI.open("https://yescapa.twic.pics/rental/picture/e0e70c72-c1b6-469f-a8b2-311b155ae010_1697100609?twic=v1/max=630")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
+  van.save!
+
+van = Van.new(title: "Van de Victorien",
+  description: "This mythical 70s combi will take you back in time. You'll enjoy the beautiful roads of France at its own pace, and you won't go unnoticed with its orange color.",
+  address: "Dinant, rue En Rhée 37",
+  car_brand: "VW",
+  model: "Westfalia Westfalia",
+  capacity: 3,
+  mileage: 10560,
+  production_year: "1977",
+  fuel_type: "gasoline",
+  price_per_day: 120,
+  user: user4)
+  file = URI.open("https://yescapa.twic.pics/rental/picture/93854626-a3bb-40b6-890a-b3caaabab340_1704566346?twic=v1/max=580")
+  van.photos.attach(io: file, filename: "Luxurious Camper 1", content_type: "image/png")
+  file = URI.open("https://yescapa.twic.pics/rental/picture/b0ebd715-c88f-4a63-b989-0a22428d770e_1705353163?twic=v1/max=580")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
+  file = URI.open("https://yescapa.twic.pics/rental/picture/025f1e65-8792-4ae2-85ae-982f55289458_1705353360?twic=v1/max=970")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
+  van.save!
+
+van = Van.new(title: "Caravane de Julien",
+  description: "This retro-style mini-caravan attaches to your vehicle with a towing hook, and gives you the freedom to sleep in the great outdoors, with just the essentials and the Class!",
+  address: "Houffalize,  Rue de la Copette 38",
+  car_brand: "VW",
+  model: "Caravane",
+  capacity: 2,
+  mileage: 41164,
+  production_year: "1977",
+  fuel_type: "gasoline",
+  price_per_day: 120,
+  user: user4)
+  file = URI.open("https://yescapa.twic.pics/rental/picture/f390d45d-f256-412b-beb2-55441df2dd7e_1675093861?twic=v1/max=970")
+  van.photos.attach(io: file, filename: "Luxurious Camper 1", content_type: "image/png")
+  file = URI.open("https://yescapa.twic.pics/rental/picture/1c3cb3ad-cf41-40a1-a1ba-38acde3e4710_1675101773?twic=v1/max=970")
+  van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
+  file = URI.open("https://yescapa.twic.pics/rental/picture/c5e504f0-b7d3-413c-852f-208b419d3ecb_1675412384?twic=v1/max=970")
   van.photos.attach(io: file, filename: "Luxurious Camper 2", content_type: "image/png")
   van.save!
 
