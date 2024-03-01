@@ -3,8 +3,5 @@ class User < ApplicationRecord
 
   has_many :reservations
 
-  validates :profile_text, :username, presence: true
-
-  validates :firstname, presence: true
-  validates :lastname, presence: true
+  validates :profile_text, :firstname, :lastname, presence: true
 end
