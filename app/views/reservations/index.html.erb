@@ -8,7 +8,8 @@
                 <%= cl_image_tag reservation.van.photos[0].key, crop: :fill %>
                 <div class="card-trip-infos">
                   <div class="p-2">
-                    <h2><%= reservation.van.title %></h2>
+                    <h2 class="p-0"><%= reservation.van.title %></h2>
+                    <p class="mt-2"><strong>Comment: </strong><%= reservation.comment %></p>
                     <p class="m-0"><strong>From:</strong> <%= reservation.from %>, <strong>until:</strong> <%= reservation.until %></p>
                   </div>
                   <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
