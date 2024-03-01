@@ -1,20 +1,23 @@
-<div class="container">
-  <h1 class="my-4 pt-4 text-center">Let's connect!</h1>
-  <div class="row mt-4 align-items-center">
-    <ul class="list-group p-3">
-      <% @reservations.each do |reservation| %>
-            <li class="list-group-item py-4">
-              <div class="d-flex justify-content-between align-items-center">
-                <p class="m-0">Your van is reserved <strong>from:</strong> <%= reservation.from %>,<br> <strong>until:</strong> <%= reservation.until %></p>
-                <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <i class="fa-solid fa-trash"></i>
-                <% end %>
-              </div>
-            </li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="row justify-content-center m-4">
-    <%= link_to "YOUR VAN PROFILE", van_path(Van.find_by(user: current_user)), class:"btn btn-primary text-center rounded-4" %>
+<div class=my-van-reservation>
+  <div class="container">
+    <h1 class="my-4 pt-4 text-center">Let's Connect !</h1>
+    <div class="row mt-4 align-items-center fs-5">
+      <ul class="list-group p-3">
+        <% @reservations.each do |reservation| %>
+              <li class="list-group-item py-4">
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="m-0">Reservation = <strong>FROM:</strong> <%= reservation.from %>,<br> <strong>UNTIL:</strong> <%= reservation.until %></p>
+                  <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                </div>
+              </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="row justify-content-center m-4">
+      <%= link_to "VAN BOOKINGS", van_path(Van.find_by(user: current_user)), class:"btn w-50 rounded-pill van-reservation-button text-center" %>
+    </div>
   </div>
 </div>
