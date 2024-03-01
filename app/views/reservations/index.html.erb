@@ -1,24 +1,28 @@
 <div class="container">
-  <h1 class="my-4 text-center" >Enjoy your escape!</h1>
-  <div class="row mt-4">
-    <% @reservations.each do |reservation| %>
-        <div class="col-12 col-sm-6 col-md-4 mb-4">
-            <%= link_to vans_path, class:"text-decoration-none text-reset" do %>
-              <div class="card-trip">
-                <%= cl_image_tag reservation.van.photos[0].key, crop: :fill %>
-                <div class="card-trip-infos">
-                  <div class="p-2">
-                    <h2 class="p-0"><%= reservation.van.title %></h2>
-                    <p class="mt-2"><strong>Comment: </strong><%= reservation.comment %></p>
-                    <p class="m-0"><strong>From:</strong> <%= reservation.from %>, <strong>until:</strong> <%= reservation.until %></p>
+  <h1 class="my-4 text-center text-black" >Enjoy your escape!</h1>
+  <% unless @reservations.empty? %>
+    <div class="row mt-4">
+      <% @reservations.each do |reservation| %>
+          <div class="col-12 col-sm-6 col-md-4 mb-4">
+              <%= link_to vans_path, class:"text-decoration-none text-reset" do %>
+                <div class="card-trip">
+                  <%= cl_image_tag reservation.van.photos[0].key, crop: :fill %>
+                  <div class="card-trip-infos">
+                    <div class="p-2">
+                      <h2 class="p-0"><%= reservation.van.title %></h2>
+                      <p class="mt-2"><strong>Comment: </strong><%= reservation.comment %></p>
+                      <p class="m-0"><strong>From:</strong> <%= reservation.from %>, <strong>until:</strong> <%= reservation.until %></p>
+                    </div>
+                    <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                      <i class="fa-solid fa-trash"></i>
+                    <% end %>
                   </div>
-                  <%= link_to reservation_path(reservation), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                    <i class="fa-solid fa-trash"></i>
-                  <% end %>
                 </div>
-              </div>
-            <% end %>
-        </div>
-      <% end %>
-    </div>
+              <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <h4 class="text-center text-black">You haven't made any reservations yet.</h4>
+    <% end %>
 </div>
