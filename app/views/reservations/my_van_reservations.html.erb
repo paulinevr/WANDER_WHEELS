@@ -14,5 +14,7 @@
       <% end %>
     </ul>
   </div>
-  <%= link_to "YOUR VAN PROFILE", van_path(Van.find_by(user: current_user)), class:"btn btn-primary text-center" %>
+  <div class="row justify-content-center m-4">
+    <%= link_to "YOUR VAN PROFILE", van_path(Van.find_by(user: current_user)), class:"btn btn-primary text-center rounded-4" %>
+  </div>
 </div>
