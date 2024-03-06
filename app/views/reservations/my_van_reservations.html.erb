@@ -20,7 +20,7 @@
       <p class="text-center text-white fs-4">No reservations yet for your van.</p>
     <% end %>
     <div class="row justify-content-center m-4">
-      <%= link_to "VAN BOOKINGS", van_path(Van.find_by(user: current_user)), class:"btn w-50 rounded-pill van-reservation-button text-center" %>
+      <%= link_to "GO TO MY VAN", van_path(Van.find_by(user: current_user)), class:"btn w-50 rounded-pill van-reservation-button text-center" %>
     </div>
   </div>
 </div>
