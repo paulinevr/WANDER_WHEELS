@@ -8,5 +8,4 @@ class Van < ApplicationRecord
   validates :description, length: { minimum: 50 }
   validates :capacity, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }
   validates :mileage, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 500_000 }
-  validates :fuel_type, inclusion: { in: ["diesel", "gasoline", "electric", "lpg"], message: "%{ value } is not a valid fuel type" }
 end
